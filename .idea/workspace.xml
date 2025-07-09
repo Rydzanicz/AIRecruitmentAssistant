@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Refactor project structure and improve routing setup.">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AIRecruitmentAssistant.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/components/dashboard/dashboard.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/components/dashboard/dashboard.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/components/dashboard/dashboard.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/models/interview.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/services/audio-capture.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/services/openai.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/app/services/speech-to-text.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/environments/environments.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/src/types/speech-recognition.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-interview-assistant/tsconfig.spec.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rydzanicz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rydzanicz/AIRecruitmentAssistant.git&quot;,
+    &quot;accountId&quot;: &quot;b8a54118-12c7-4120-aab7-e33e2de18486&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2zdT7XdNBb4dLWWWiq87NprMBjh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/ai-interview-assistant/src/app/components/transcript&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\admin\\WebstormProjects\\AIRecruitmentAssistant\\rekrutacja-voice\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\transcript" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\app" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\settings" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\app" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\settings" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\dashboard" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="" />
+      <created>1752059783927</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752059783927</updated>
+      <workItem from="1752059785396" duration="11976000" />
+      <workItem from="1752075249509" duration="313000" />
+      <workItem from="1752080157537" duration="670000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
+      <option name="closed" value="true" />
+      <created>1752062676752</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752062676752</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initialize Angular project with basic configuration">
+      <option name="closed" value="true" />
+      <created>1752062703134</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752062703134</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Remove settings component and related functionality">
+      <option name="closed" value="true" />
+      <created>1752071051927</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752071051927</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor project structure and improve routing setup.">
+      <option name="closed" value="true" />
+      <created>1752073007168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752073007168</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add AI Interview Assistant core components and services" />
+    <MESSAGE value="Initialize Angular project with basic configuration" />
+    <MESSAGE value="Remove settings component and related functionality" />
+    <MESSAGE value="Refactor project structure and improve routing setup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor project structure and improve routing setup." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/ai-interview-assistant/src/main.ts</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
