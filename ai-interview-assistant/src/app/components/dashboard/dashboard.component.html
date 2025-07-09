@@ -1,0 +1,54 @@
+<!-- src/app/components/dashboard.component.html -->
+<div class="dashboard">
+  <div class="header">
+    <h1>AI Interview Assistant</h1>
+    <p>Asystent do rozmów rekrutacyjnych</p>
+  </div>
+
+  <div class="recording-section">
+    <div class="audio-method-selector">
+      <h3>Wybierz źródło audio:</h3>
+      <div class="method-cards">
+        <mat-card
+          *ngFor="let method of audioMethods"
+          [class.selected]="selectedMethod() === method.id"
+          (click)="selectMethod(method.id)">
+          <mat-icon>{{ method.icon }}</mat-icon>
+          <h4>{{ method.name }}</h4>
+          <p>{{ method.description }}</p>
+        </mat-card>
+      </div>
+    </div>
+    <div class="transcription-section" *ngIf="currentTranscript()">
+      <h3>Transkrypcja na żywo:</h3>
+      <div class="transcript-box">
+        {{ currentTranscript() }}
+      </div>
+    </div>
+
+    <div class="recording-controls">
+      <button mat-fab color="primary" [disabled]="!canStartRecording()" (click)="toggleRecording()">
+        <mat-icon>{{ isRecording() ? 'stop' : 'play_arrow' }}</mat-icon>
+      </button>
+      <div class="recording-status">
+        <p>{{ recordingStatus() }}</p>
+        <div class="audio-level" *ngIf="isRecording()">
+          <div class="level-bar" [style.width.%]="audioLevel()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="transcription-section" *ngIf="currentTranscript()">
+    <h3>Transkrypcja na żywo:</h3>
+    <div class="transcript-box">{{ currentTranscript() }}</div>
+  </div>
+
+  <div class="ai-responses" *ngIf="aiResponses().length">
+    <h3>Odpowiedzi AI:</h3>
+    <div class="response-card" *ngFor="let r of aiResponses()">
+      <div class="question">{{ r.question }}</div>
+      <div class="answer">{{ r.answer }}</div>
+    </div>
+  </div>
+</div>
