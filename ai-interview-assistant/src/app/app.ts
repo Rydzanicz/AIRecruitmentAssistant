@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
-import {SettingsComponent} from './components/settings/settings.component';
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -16,16 +16,15 @@ import {SettingsComponent} from './components/settings/settings.component';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    DashboardComponent,
-    SettingsComponent
+    DashboardComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  currentView = signal<'dashboard' | 'settings'>('dashboard');
+  currentView = signal<'dashboard' >('dashboard');
 
-  setView(view: 'dashboard' | 'settings'): void {
+  setView(view: 'dashboard' ): void {
     this.currentView.set(view);
   }
 }

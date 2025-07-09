@@ -14,34 +14,13 @@
         <mat-icon>dashboard</mat-icon>
         Dashboard
       </button>
-      <button
-        [attr.aria-current]="currentView() === 'settings' ? 'page' : null">
 
-        <mat-icon>settings</mat-icon>
-        Ustawienia
-      </button>
     </nav>
   </mat-sidenav>
 
   <!-- Główna treść -->
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="drawer.toggle()" aria-label="Otwórz menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>AI Interview Assistant</span>
-      <span class="spacer"></span>
-      <button
-        mat-icon-button
-        (click)="setView('settings')"
-        aria-label="Przejdź do ustawień">
-        <mat-icon>settings</mat-icon>
-      </button>
-    </mat-toolbar>
 
     <main class="main-content">
-      <app-dashboard *ngIf="currentView() === 'dashboard'"></app-dashboard>
-      <app-settings *ngIf="currentView() === 'settings'"></app-settings>
+      <app-dashboard></app-dashboard>
     </main>
-  </mat-sidenav-content>
 </mat-sidenav-container>
