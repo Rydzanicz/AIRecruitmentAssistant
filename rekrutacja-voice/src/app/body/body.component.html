@@ -1,8 +1,6 @@
-
-
-<div class="content">
-  <div class="title-with-wave">
-    <h2 class="title">Zapraszamy na spływy kajakowe po najpiękniejszych rzekach Lubelszczyzny
-    </h2>
-  </div>
+<div class="body">
+  <input [(ngModel)]="vm.question" placeholder="Zadaj pytanie..." />
+  <button (click)="ask()" [disabled]="vm.loading || !vm.question.trim()">Wyślij</button>
+  <div *ngIf="vm.loading">Czekaj...</div>
+  <div *ngIf="vm.answer">{{ vm.answer }}</div>
 </div>

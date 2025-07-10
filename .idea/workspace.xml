@@ -5,53 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Refactor and restructure Angular project setup">
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/header/header.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/header/header.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/header/header.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/header/header.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/kayak-booking.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/kayak-booking.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/settings/settings.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/settings/settings.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/settings/settings.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/settings/settings.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/assets/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/BodyViewModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.config.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.config.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/perplexity-chat/perplexity-chat.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/perplexity-chat/perplexity-chat.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/perplexity-chat/perplexity-chat.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/recruiter-transcript/recruiter-transcript.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/recruiter-transcript/recruiter-transcript.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/recruiter-transcript/recruiter-transcript.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/recruiter-transcript/recruiter-transcript.spec.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/speech-recognition.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/speech-recognition.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/main.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +99,7 @@
       <workItem from="1752075249509" duration="313000" />
       <workItem from="1752080157537" duration="3709000" />
       <workItem from="1752129869915" duration="346000" />
-      <workItem from="1752131520514" duration="1535000" />
+      <workItem from="1752131520514" duration="3991000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -196,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752082816332</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactor and restructure Angular project setup">
+      <option name="closed" value="true" />
+      <created>1752133109239</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752133109239</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
