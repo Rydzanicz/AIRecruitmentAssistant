@@ -5,6 +5,16 @@
   (mousedown)="startDrag($event)"
   (click)="focusInput()"
 >
+  <div #chatHistory class="chat-history">
+    <div *ngFor="let msg of history" [ngClass]="msg.role">
+      <span *ngIf="msg.role === 'ai'" class="ai-avatar"></span>
+      <span class="msg-text">{{ msg.content }}</span>
+    </div>
+    <div *ngIf="loading" class="ai loading">
+      <span class="ai-avatar"></span>
+      <span class="msg-text">Czekaj...</span>
+    </div>
+  </div>
   <form class="chat-form" (ngSubmit)="ask()">
     <input
       #chatInput
@@ -18,11 +28,4 @@
       <span class="material-icons">send</span>
     </button>
   </form>
-  <div *ngIf="loading" class="chat-loading">
-    <span class="spinner"></span> Czekaj...
-  </div>
-  <div *ngIf="answer" class="chat-answer">
-    <span class="ai-avatar"></span>
-    {{ answer }}
-  </div>
 </div>

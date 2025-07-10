@@ -18,12 +18,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Add draggable chat widget component and integrate with body component">
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/kayak-booking.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/kayak-booking.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
+    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;">
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +83,11 @@
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\transcript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\Component" />
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\Component\chat-widget" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\app" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\settings" />
-      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\dashboard" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -110,7 +109,7 @@
       <workItem from="1752075249509" duration="313000" />
       <workItem from="1752080157537" duration="3709000" />
       <workItem from="1752129869915" duration="346000" />
-      <workItem from="1752131520514" duration="5288000" />
+      <workItem from="1752131520514" duration="5606000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -200,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752137453038</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;">
+      <option name="closed" value="true" />
+      <created>1752137803312</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752137803312</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +225,8 @@
     <MESSAGE value="Refactor app structure and add Perplexity integration" />
     <MESSAGE value="Add draggable chat widget component and integrate updates" />
     <MESSAGE value="Add draggable chat widget component and integrate with body component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add draggable chat widget component and integrate with body component" />
+    <MESSAGE value="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

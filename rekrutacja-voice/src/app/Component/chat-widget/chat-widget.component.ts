@@ -1,44 +1,67 @@
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
-import { PerplexityService } from '../../services/perplexity.service';
+import { Component, ViewChild, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import {NgIf, NgFor, NgClass} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {PerplexityService} from '../../services/perplexity.service';
+
+interface ChatMessage {
+  role: 'user' | 'ai';
+  content: string;
+}
 
 @Component({
   selector: 'app-chat-widget',
   standalone: true,
   templateUrl: './chat-widget.component.html',
   styleUrls: ['./chat-widget.component.scss'],
-  imports: [NgIf, FormsModule]
+  imports: [NgIf, NgFor, FormsModule, NgClass]
 })
-export class ChatWidgetComponent {
+export class ChatWidgetComponent implements AfterViewInit {
   question = '';
-  answer = '';
   loading = false;
   dragging = false;
   pos = { x: 100, y: 100 };
+  history: ChatMessage[] = [];
 
   @ViewChild('chatInput') chatInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('chatHistory') chatHistory!: ElementRef<HTMLDivElement>;
 
   constructor(private perplexity: PerplexityService) {}
 
+  ngAfterViewInit() {
+    this.focusInput();
+  }
+
   ask() {
     if (!this.question.trim() || this.loading) return;
+    const userMsg: ChatMessage = { role: 'user', content: this.question };
+    this.history.push(userMsg);
     this.loading = true;
-    this.answer = '';
     this.perplexity.askQuestion(this.question).subscribe({
       next: (res: string) => {
-        this.answer = res;
+        this.history.push({ role: 'ai', content: res });
         this.loading = false;
+        this.scrollToBottom();
       },
       error: () => {
-        this.answer = 'Błąd komunikacji z Perplexity';
+        this.history.push({ role: 'ai', content: 'Błąd komunikacji z Perplexity' });
         this.loading = false;
+        this.scrollToBottom();
       }
     });
+    this.question = '';
+    this.scrollToBottom();
   }
 
   focusInput() {
     setTimeout(() => this.chatInput?.nativeElement.focus(), 0);
+  }
+
+  scrollToBottom() {
+    setTimeout(() => {
+      if (this.chatHistory) {
+        this.chatHistory.nativeElement.scrollTop = this.chatHistory.nativeElement.scrollHeight;
+      }
+    }, 0);
   }
 
   startDrag(event: MouseEvent) {
