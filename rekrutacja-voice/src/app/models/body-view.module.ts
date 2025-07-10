@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PerplexityService } from '../services/perplexity.service';
 
 @Injectable({ providedIn: 'root' })
-export class BodyViewModel {
+export class BodyViewModule {
   question = '';
   answer = '';
   loading = false;
@@ -10,7 +10,7 @@ export class BodyViewModel {
   constructor(private perplexity: PerplexityService) {}
 
   ask() {
-    if (!this.question.trim()) return;
+    if (!this.question.trim() || this.loading) return;
     this.loading = true;
     this.answer = '';
     this.perplexity.askQuestion(this.question).subscribe({

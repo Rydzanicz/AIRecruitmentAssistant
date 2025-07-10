@@ -1,0 +1,13 @@
+<div
+  class="chat-widget"
+  [style.left.px]="pos.x"
+  [style.top.px]="pos.y"
+  (mousedown)="startDrag($event)"
+>
+  <form (ngSubmit)="ask()">
+    <input [(ngModel)]="question" name="question" placeholder="Napisz wiadomość..." autocomplete="off" />
+    <button type="submit" [disabled]="loading || !question.trim()">Wyślij</button>
+  </form>
+  <div *ngIf="loading">Czekaj...</div>
+  <div *ngIf="answer">{{ answer }}</div>
+</div>

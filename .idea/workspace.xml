@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Refactor and restructure Angular project setup">
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/BodyViewModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
+    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Refactor app structure and add Perplexity integration">
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/chat-widget.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/main.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/main.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/BodyViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/body-view.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/assets",
+    "last_opened_file_path": "C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/app/Component",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,11 +68,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\Component" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\assets" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\perplexity-chat" />
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\transcript" />
-      <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app\components\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\ai-interview-assistant\src\app" />
@@ -99,7 +100,7 @@
       <workItem from="1752075249509" duration="313000" />
       <workItem from="1752080157537" duration="3709000" />
       <workItem from="1752129869915" duration="346000" />
-      <workItem from="1752131520514" duration="3991000" />
+      <workItem from="1752131520514" duration="4660000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -165,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752133109239</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactor app structure and add Perplexity integration">
+      <option name="closed" value="true" />
+      <created>1752136409678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752136409678</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +189,8 @@
     <MESSAGE value="Add Perplexity chat feature with Angular service integration" />
     <MESSAGE value="Add Perplexity chat feature with enhanced HTTP integration" />
     <MESSAGE value="Refactor and restructure Angular project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor and restructure Angular project setup" />
+    <MESSAGE value="Refactor app structure and add Perplexity integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor app structure and add Perplexity integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgIf } from '@angular/common';
-import {BodyViewModel} from '../models/BodyViewModel';
+import {BodyViewModule} from '../models/body-view.module';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -11,7 +11,7 @@ import {FormsModule} from '@angular/forms';
   imports: [NgIf, FormsModule]
 })
 export class BodyComponent {
-  constructor(public vm: BodyViewModel) {}
+  constructor(public vm: BodyViewModule) {}
 
   ask() {
     this.vm.ask();

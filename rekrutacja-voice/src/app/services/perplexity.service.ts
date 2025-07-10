@@ -7,7 +7,7 @@ import {Observable, map} from 'rxjs';
 })
 export class PerplexityService {
     private readonly apiUrl = 'https://api.perplexity.ai/chat/completions';
-    private apiKey = 'API'; // wstaw swój klucz API
+    private apiKey = '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'; // wstaw swój klucz API
 
     constructor(private http: HttpClient) {
     }
@@ -29,7 +29,7 @@ export class PerplexityService {
             messages: [
                 {
                     "role": "system",
-                    "content": "Answer only in two short, precise sentences. No explanations or extra details."
+                    "content": "Answer only in two short, precise sentences. No explanations or extra details. Allways answer in Polish."
                 },
                 {role: 'user', content: userQuestion}
             ]
