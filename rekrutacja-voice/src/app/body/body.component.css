@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin: 5vh auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333333;
+  text-align: left;
+  max-width: 100%;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.subheading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #e40230;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #666;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide {
+  min-width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #e40230;
+  border: 2px solid #e40230;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prev-button {
+  left: 20px;
+}
+
+.next-button {
+  right: 20px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  transform: translateY(-50%) scale(1.15);
+  background-color: #e40230;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.routes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.route.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 2px solid #e40230;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.route.btn:hover {
+  background-color: #e40230;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.route.btn:active {
+  background-color: #bc0a0a;
+  transform: translateY(1px);
+}

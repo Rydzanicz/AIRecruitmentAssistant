@@ -1,6 +1,0 @@
-<div class="perplexity-chat">
-  <input [(ngModel)]="question" placeholder="Zadaj pytanie..." />
-  <button (click)="ask()" [disabled]="!loading || !question.trim()">Wyślij</button>
-  <div *ngIf="loading" class="loading">Czekaj...</div>
-  <div *ngIf="answer" class="answer">{{ answer }}</div>
-</div>
