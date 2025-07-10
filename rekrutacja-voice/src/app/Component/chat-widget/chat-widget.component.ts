@@ -1,12 +1,7 @@
 import { Component, ViewChild, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 import {NgIf, NgFor, NgClass} from '@angular/common';
+import { PerplexityService, ChatMessage } from '../../services/perplexity.service';
 import {FormsModule} from '@angular/forms';
-import {PerplexityService} from '../../services/perplexity.service';
-
-interface ChatMessage {
-  role: 'user' | 'ai';
-  content: string;
-}
 
 @Component({
   selector: 'app-chat-widget',
@@ -33,23 +28,29 @@ export class ChatWidgetComponent implements AfterViewInit {
 
   ask() {
     if (!this.question.trim() || this.loading) return;
-    const userMsg: ChatMessage = { role: 'user', content: this.question };
-    this.history.push(userMsg);
+    this.history.push({ role: 'user', content: this.question });
     this.loading = true;
-    this.perplexity.askQuestion(this.question).subscribe({
+    this.perplexity.askWithHistory(this.getFullHistory()).subscribe({
       next: (res: string) => {
-        this.history.push({ role: 'ai', content: res });
+        this.history.push({ role: 'assistant', content: res });
         this.loading = false;
         this.scrollToBottom();
       },
       error: () => {
-        this.history.push({ role: 'ai', content: 'Błąd komunikacji z Perplexity' });
+        this.history.push({ role: 'assistant', content: 'Błąd komunikacji z Perplexity' });
         this.loading = false;
         this.scrollToBottom();
       }
     });
     this.question = '';
     this.scrollToBottom();
+  }
+
+  getFullHistory(): ChatMessage[] {
+    return [
+      { role: 'system', content: 'Odpowiadaj krótko i rzeczowo.' },
+      ...this.history
+    ];
   }
 
   focusInput() {

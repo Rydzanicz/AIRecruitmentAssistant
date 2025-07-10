@@ -19,9 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget/chat-widget.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/body-view.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/body-view.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,22 +61,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/app/Component",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\admin\\WebstormProjects\\AIRecruitmentAssistant\\rekrutacja-voice\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/app/Component&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\admin\\WebstormProjects\\AIRecruitmentAssistant\\rekrutacja-voice\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\Component" />
@@ -109,7 +112,8 @@
       <workItem from="1752075249509" duration="313000" />
       <workItem from="1752080157537" duration="3709000" />
       <workItem from="1752129869915" duration="346000" />
-      <workItem from="1752131520514" duration="5606000" />
+      <workItem from="1752131520514" duration="5969000" />
+      <workItem from="1752144191969" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -207,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752137803312</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;">
+      <option name="closed" value="true" />
+      <created>1752138289949</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1752138289949</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

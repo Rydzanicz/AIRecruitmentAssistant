@@ -1,3 +1,4 @@
+
 <div
   class="chat-widget"
   [style.left.px]="pos.x"
@@ -7,7 +8,7 @@
 >
   <div #chatHistory class="chat-history">
     <div *ngFor="let msg of history" [ngClass]="msg.role">
-      <span *ngIf="msg.role === 'ai'" class="ai-avatar"></span>
+      <span *ngIf="msg.role === 'assistant'" class="ai-avatar"></span>
       <span class="msg-text">{{ msg.content }}</span>
     </div>
     <div *ngIf="loading" class="ai loading">
