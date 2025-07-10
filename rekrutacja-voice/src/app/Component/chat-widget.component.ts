@@ -1,11 +1,14 @@
 import { Component, HostListener } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {NgIf} from '@angular/common';
+import {BodyViewModule} from '../models/body-view.module';
 
 @Component({
   selector: 'app-chat-widget',
   templateUrl: './chat-widget.component.html',
   imports: [
-    FormsModule
+    FormsModule,
+    NgIf
   ],
   styleUrls: ['./chat-widget.component.scss']
 })
@@ -15,11 +18,11 @@ export class ChatWidgetComponent {
   loading = false;
   dragging = false;
   pos = { x: 100, y: 100 };
+  constructor(public vm: BodyViewModule) {}
 
   ask() {
-    // Wstaw wywołanie serwisu API
+    this.vm.ask();
   }
-
   // Drag & drop obsługa
   startDrag(event: MouseEvent) {
     this.dragging = true;

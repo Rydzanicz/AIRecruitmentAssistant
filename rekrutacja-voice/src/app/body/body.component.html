@@ -1,12 +1,1 @@
-<form (ngSubmit)="ask()">
-  <input
-    [(ngModel)]="vm.question"
-    name="question"
-    placeholder="Zadaj pytanie..."
-    (keydown.enter)="ask()"
-    autocomplete="off"
-  />
-  <button type="submit" [disabled]="vm.loading || !vm.question.trim()">Wyślij</button>
-</form>
-<div *ngIf="vm.loading">Czekaj...</div>
-<div *ngIf="vm.answer">{{ vm.answer }}</div>
+<app-chat-widget></app-chat-widget>

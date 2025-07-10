@@ -5,12 +5,14 @@ import {AppComponent} from './app.component';
 import {SettingsComponent} from './settings/settings.component';
 import {AppRoutingModule} from './app.routes';
 import {HttpClientModule} from '@angular/common/http';
+import {ChatWidgetModule} from './models/chat-widget.module';
 
 @NgModule({
   declarations: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChatWidgetModule,
     SettingsComponent,
     AppComponent,
     HttpClientModule

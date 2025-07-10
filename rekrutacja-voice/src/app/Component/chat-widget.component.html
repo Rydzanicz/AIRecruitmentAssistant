@@ -5,9 +5,16 @@
   (mousedown)="startDrag($event)"
 >
   <form (ngSubmit)="ask()">
-    <input [(ngModel)]="question" name="question" placeholder="Napisz wiadomość..." autocomplete="off" />
-    <button type="submit" [disabled]="loading || !question.trim()">Wyślij</button>
+    <input
+      [(ngModel)]="vm.question"
+      name="question"
+      placeholder="Zadaj pytanie..."
+      (keydown.enter)="ask()"
+      autocomplete="off"
+    />
+    <button type="submit" [disabled]="vm.loading || !vm.question.trim()">Wyślij</button>
   </form>
-  <div *ngIf="loading">Czekaj...</div>
-  <div *ngIf="answer">{{ answer }}</div>
+  <div *ngIf="vm.loading">Czekaj...</div>
+  <div *ngIf="vm.answer">{{ vm.answer }}</div>
+
 </div>

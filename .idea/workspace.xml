@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Refactor app structure and add Perplexity integration">
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/chat-widget.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="Add draggable chat widget component and integrate updates">
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/chat-widget.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/body/body.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/BodyViewModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/models/body-view.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/perplexity.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <workItem from="1752075249509" duration="313000" />
       <workItem from="1752080157537" duration="3709000" />
       <workItem from="1752129869915" duration="346000" />
-      <workItem from="1752131520514" duration="4660000" />
+      <workItem from="1752131520514" duration="4989000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -174,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752136409678</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add draggable chat widget component and integrate updates">
+      <option name="closed" value="true" />
+      <created>1752137005429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752137005429</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +194,8 @@
     <MESSAGE value="Add Perplexity chat feature with enhanced HTTP integration" />
     <MESSAGE value="Refactor and restructure Angular project setup" />
     <MESSAGE value="Refactor app structure and add Perplexity integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor app structure and add Perplexity integration" />
+    <MESSAGE value="Add draggable chat widget component and integrate updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add draggable chat widget component and integrate updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
