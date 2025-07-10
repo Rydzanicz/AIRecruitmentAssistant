@@ -1,12 +1,11 @@
-
-<div
-  class="chat-widget"
-  [style.left.px]="pos.x"
-  [style.top.px]="pos.y"
-  (mousedown)="startDrag($event)"
-  (click)="focusInput()"
->
+<div class="chat-widget" [style.left.px]="pos.x" [style.top.px]="pos.y">
+  <div class="chat-header" (mousedown)="startDrag($event)">
+    <span class="material-icons">drag_indicator</span>
+    <span>Czat AI</span>
+  </div>
   <div #chatHistory class="chat-history">
+
+
     <div *ngFor="let msg of history" [ngClass]="msg.role">
       <span *ngIf="msg.role === 'assistant'" class="ai-avatar"></span>
       <span class="msg-text">{{ msg.content }}</span>
@@ -27,6 +26,9 @@
     />
     <button type="submit" [disabled]="loading || !question.trim()" class="chat-send-btn">
       <span class="material-icons">send</span>
+    </button>
+    <button type="button" class="reset-btn" (click)="resetChat()">
+      <span class="material-icons">restart_alt</span>
     </button>
   </form>
 </div>

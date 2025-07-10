@@ -52,6 +52,11 @@ export class ChatWidgetComponent implements AfterViewInit {
       ...this.history
     ];
   }
+  resetChat() {
+    this.history = [];
+    this.question = '';
+    this.focusInput();
+  }
 
   focusInput() {
     setTimeout(() => this.chatInput?.nativeElement.focus(), 0);
