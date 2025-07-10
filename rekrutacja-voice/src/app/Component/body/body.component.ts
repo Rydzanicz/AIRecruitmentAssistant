@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {ChatWidgetComponent} from '../Component/chat-widget.component';
+import {ChatWidgetComponent} from '../chat-widget/chat-widget.component';
 
 @Component({
   selector: 'app-body',

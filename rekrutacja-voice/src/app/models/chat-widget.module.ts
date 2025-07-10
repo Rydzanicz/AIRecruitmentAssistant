@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {ChatWidgetComponent} from '../Component/chat-widget.component';
+import {ChatWidgetComponent} from '../Component/chat-widget/chat-widget.component';
 
 @NgModule({
   declarations: [],

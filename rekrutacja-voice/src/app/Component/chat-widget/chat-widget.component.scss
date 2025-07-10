@@ -1,0 +1,101 @@
+.chat-widget {
+  position: fixed;
+  z-index: 10000;
+  width: 340px;
+  min-height: 140px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #0002;
+  padding: 1.4em 1.2em 1.2em 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  transition: box-shadow 0.2s;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  border: 1px solid #e5e7eb;
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  font-size: 1.04em;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #f9fafb;
+}
+.chat-input:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+.chat-send-btn {
+  background: linear-gradient(90deg, #6366f1 0%, #2a2a72 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.1em;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  box-shadow: 0 2px 8px #6366f120;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.chat-send-btn:disabled {
+  background: #d1d5db;
+  color: #888;
+  cursor: not-allowed;
+}
+.material-icons {
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.chat-loading {
+  color: #6366f1;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid #d1d5db;
+  border-top: 2.5px solid #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.chat-answer {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 1em 1.1em;
+  font-size: 1.05em;
+  color: #222;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7em;
+  box-shadow: 0 1px 4px #6366f110;
+}
+.ai-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 60%, #2a2a72 100%);
+  display: inline-block;
+  margin-right: 0.5em;
+}
