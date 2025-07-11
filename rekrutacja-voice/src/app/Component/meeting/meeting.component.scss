@@ -9,6 +9,29 @@
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
 .popup-content {
   color: #333;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  min-height: 100px;
+  white-space: pre-wrap;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
 }

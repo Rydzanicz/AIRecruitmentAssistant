@@ -1,15 +1,25 @@
-<button (click)="start()">Start</button>
-<button (click)="stop()">Stop</button>
-<pre>{{ transcript$ | async }}</pre>
+<div>
+  <h2>Transkrypcja rozmów</h2>
 
-<div *ngIf="error$ | async as error" class="popup">
-  <div class="popup-content">
-    <strong>Błąd:</strong> {{ error }}
-    <ul>
-      <li>Upewnij się, że używasz najnowszej wersji Chrome, Edge lub Opera.</li>
-      <li>Podczas wyboru karty zaznacz „Udostępnij dźwięk”.</li>
-      <li>Jeśli widzisz ten komunikat mimo wszystko, spróbuj ponownie lub zmień przeglądarkę.</li>
-    </ul>
-    <button (click)="clearError()">Zamknij</button>
+  <div>
+    <button (click)="start()">Start</button>
+    <button (click)="stop()">Stop</button>
+  </div>
+
+  <div>
+    <h3>Transkrypcja:</h3>
+    <pre>{{ transcript$ | async }}</pre>
+  </div>
+
+  <div *ngIf="error$ | async as error" class="popup">
+    <div class="popup-content">
+      <strong>Błąd:</strong> {{ error }}
+      <ul>
+        <li>Upewnij się, że używasz najnowszej wersji Chrome, Edge lub Opera.</li>
+        <li>Podczas wyboru karty zaznacz „Udostępnij dźwięk".</li>
+        <li>Jeśli widzisz ten komunikat mimo wszystko, spróbuj ponownie lub zmień przeglądarkę.</li>
+      </ul>
+      <button (click)="clearError()">Zamknij</button>
+    </div>
   </div>
 </div>

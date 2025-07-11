@@ -18,16 +18,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="&quot;Refactor chat widget for improved message handling, replace 'ai' role with 'assistant', integrate message history into API calls, and remove unused BodyViewModule.&quot;">
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/meeting-question.service.ts" afterDir="false" />
+    <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="&quot;Add MeetingComponent with Whisper integration for audio transcription and question handling&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/body/body.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/body/body.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/body/body.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/body/body.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/meeting-question.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/meeting-question.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +62,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/app/Component/meeting",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\admin\\WebstormProjects\\AIRecruitmentAssistant\\rekrutacja-voice\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/WebstormProjects/AIRecruitmentAssistant/rekrutacja-voice/src/app/Component/meeting&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\admin\\WebstormProjects\\AIRecruitmentAssistant\\rekrutacja-voice\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\WebstormProjects\AIRecruitmentAssistant\rekrutacja-voice\src\app\Component\meeting" />
@@ -117,6 +115,7 @@
       <workItem from="1752129869915" duration="346000" />
       <workItem from="1752131520514" duration="5969000" />
       <workItem from="1752144191969" duration="2278000" />
+      <workItem from="1752222505308" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="Add AI Interview Assistant core components and services">
       <option name="closed" value="true" />
@@ -230,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752147556704</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="&quot;Add MeetingComponent with Whisper integration for audio transcription and question handling&quot;">
+      <option name="closed" value="true" />
+      <created>1752222551479</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1752222551479</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +257,8 @@
     <MESSAGE value="Add draggable chat widget component and integrate with body component" />
     <MESSAGE value="&quot;Add and integrate draggable chat widget component with updated styles and functionality, refactor project structure, and remove unused services.&quot;" />
     <MESSAGE value="&quot;Refactor chat widget for improved message handling, replace 'ai' role with 'assistant', integrate message history into API calls, and remove unused BodyViewModule.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactor chat widget for improved message handling, replace 'ai' role with 'assistant', integrate message history into API calls, and remove unused BodyViewModule.&quot;" />
+    <MESSAGE value="&quot;Add MeetingComponent with Whisper integration for audio transcription and question handling&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add MeetingComponent with Whisper integration for audio transcription and question handling&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

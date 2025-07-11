@@ -14,6 +14,8 @@ export class MeetingQuestionService {
   private error$ = new BehaviorSubject<string | null>(null);
   private mediaRecorder?: MediaRecorder;
   private audioChunks: Blob[] = [];
+  private isRecording = false;
+  private fullTranscript = '';
 
   constructor(private http: HttpClient) {}
 
@@ -31,64 +33,119 @@ export class MeetingQuestionService {
 
   async startCapture(): Promise<void> {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
-      this.error$.next(
-        'Twoja przeglądarka nie obsługuje przechwytywania ekranu/audio. Użyj najnowszego Google Chrome lub Microsoft Edge.'
-      );
+      this.error$.next('Twoja przeglądarka nie obsługuje przechwytywania ekranu/audio.');
       return;
     }
+
     try {
-      // Musi być video: true, by pojawił się popup wyboru karty!
       const stream = await navigator.mediaDevices.getDisplayMedia({
         video: true,
         audio: true
       });
+
       this.audioChunks = [];
       this.mediaRecorder = new MediaRecorder(stream);
-      this.mediaRecorder.ondataavailable = event => this.audioChunks.push(event.data);
-      this.mediaRecorder.start(5000); // co 5s fragment audio
-      this.mediaRecorder.onstop = () => this.processAudio();
+      this.isRecording = true;
+
+      // Wydarzenie wywoływane co 2 sekundy
+      this.mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          this.audioChunks.push(event.data);
+          console.log('Otrzymano fragment audio:', event.data.size, 'bajtów');
+
+          // Przetwarzanie fragmentu audio
+          this.processAudioChunk();
+        }
+      };
+
+      // Rozpoczęcie nagrywania z fragmentami co 2 sekundy
+      this.mediaRecorder.start(2000);
       this.error$.next(null);
+      this.transcript$.next('Rozpoczęto nagrywanie... Przetwarzanie audio...');
+
+      // Automatyczne żądanie danych co 3 sekundy
+      this.startPeriodicDataRequest();
+
     } catch (err: any) {
-      this.error$.next(
-        'Nie przyznano uprawnień do przechwytywania ekranu/audio. ' +
-        'Podczas wyboru karty z Google Meet lub Teams upewnij się, że zaznaczysz „Udostępnij dźwięk”.'
-      );
+      this.error$.next('Nie przyznano uprawnień do przechwytywania ekranu/audio.');
     }
+  }
+
+  private startPeriodicDataRequest() {
+    const interval = setInterval(() => {
+      if (this.mediaRecorder && this.isRecording) {
+        this.mediaRecorder.requestData();
+      } else {
+        clearInterval(interval);
+      }
+    }, 3000);
   }
 
   stopCapture(): void {
-    this.mediaRecorder?.stop();
+    this.isRecording = false;
+    if (this.mediaRecorder) {
+      this.mediaRecorder.stop();
+    }
+    this.transcript$.next(this.fullTranscript || 'Zatrzymano nagrywanie.');
   }
 
-  private async processAudio() {
-    const blob = new Blob(this.audioChunks, { type: 'audio/wav' });
-    const model = 'tiny.en';
+  private async processAudioChunk() {
+    if (this.audioChunks.length === 0) return;
 
-    const { supported } = await canUseWhisperWeb(model);
-    if (!supported) {
-      this.transcript$.next('Whisper-web nie jest wspierany w tej przeglądarce.');
-      return;
+    try {
+      const blob = new Blob(this.audioChunks, { type: 'audio/wav' });
+
+      if (blob.size < 1000) { // Pomijamy bardzo małe fragmenty
+        return;
+      }
+
+      const model = 'tiny.en';
+      this.transcript$.next(this.fullTranscript + ' [Przetwarzanie...]');
+
+      const { supported } = await canUseWhisperWeb(model);
+      if (!supported) {
+        this.transcript$.next('Whisper-web nie jest wspierany w tej przeglądarce.');
+        return;
+      }
+
+      // Pobierz model tylko raz
+      if (!(window as any).whisperModelLoaded) {
+        await downloadWhisperModel({ model, onProgress: () => {} });
+        (window as any).whisperModelLoaded = true;
+      }
+
+      const channelWaveform = await resampleTo16Khz({
+        file: new File([blob], 'audio.wav'),
+        onProgress: () => {}
+      });
+
+      const { transcription } = await transcribe({
+        channelWaveform,
+        model,
+        onProgress: () => {}
+      });
+
+      const newText = transcription.map(t => t.text).join(' ');
+      if (newText.trim()) {
+        this.fullTranscript += newText + ' ';
+        this.transcript$.next(this.fullTranscript);
+
+        // Wykrywanie pytań
+        const questions = newText.match(/[^.?!]*\?/g) || [];
+        questions.forEach(q => this.sendToAI(q.trim()));
+      }
+
+      // Wyczyść przetworzony audio
+      this.audioChunks = [];
+
+    } catch (error) {
+      console.error('Błąd przetwarzania audio:', error);
+      this.transcript$.next(this.fullTranscript + ' [Błąd przetwarzania]');
     }
-    await downloadWhisperModel({ model, onProgress: () => {} });
-
-    const channelWaveform = await resampleTo16Khz({
-      file: new File([blob], 'audio.wav'),
-      onProgress: () => {}
-    });
-
-    const { transcription } = await transcribe({
-      channelWaveform,
-      model,
-      onProgress: () => {}
-    });
-    const text = transcription.map(t => t.text).join(' ');
-    this.transcript$.next(text);
-
-    const questions = text.match(/[^.?!]*\?/g) || [];
-    questions.forEach(q => this.sendToAI(q.trim()));
   }
 
   private sendToAI(question: string) {
-    this.http.post('/api/ask-ai', { question }).subscribe();
+    console.log('Wykryto pytanie:', question);
+
   }
 }
