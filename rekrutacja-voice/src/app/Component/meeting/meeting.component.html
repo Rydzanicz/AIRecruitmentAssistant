@@ -1,25 +1,12 @@
 <div>
-  <h2>Transkrypcja rozmów</h2>
-
+  <h2>Transkrypcja rozmów (OCR z ekranu)</h2>
   <div>
     <button (click)="start()">Start</button>
     <button (click)="stop()">Stop</button>
   </div>
-
+  <div>Status: {{ status$ | async }}</div>
   <div>
     <h3>Transkrypcja:</h3>
-    <pre>{{ transcript$ | async }}</pre>
-  </div>
-
-  <div *ngIf="error$ | async as error" class="popup">
-    <div class="popup-content">
-      <strong>Błąd:</strong> {{ error }}
-      <ul>
-        <li>Upewnij się, że używasz najnowszej wersji Chrome, Edge lub Opera.</li>
-        <li>Podczas wyboru karty zaznacz „Udostępnij dźwięk".</li>
-        <li>Jeśli widzisz ten komunikat mimo wszystko, spróbuj ponownie lub zmień przeglądarkę.</li>
-      </ul>
-      <button (click)="clearError()">Zamknij</button>
-    </div>
+    <pre class="transcript-box">{{ transcript$ | async }}</pre>
   </div>
 </div>

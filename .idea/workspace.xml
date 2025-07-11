@@ -19,12 +19,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a6091d0-181b-4caa-91d5-6c6a93d1e916" name="Changes" comment="&quot;Add MeetingComponent with Whisper integration for audio transcription and question handling&quot;">
+      <change afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/ocr-sniffer.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/Component/meeting/meeting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/app.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/meeting-question.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/rekrutacja-voice/src/app/services/meeting-question.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

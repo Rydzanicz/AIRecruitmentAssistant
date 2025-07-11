@@ -1,36 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { OcrSnifferService } from '../../services/ocr-sniffer.service';
 import { Observable } from 'rxjs';
-import { MeetingQuestionService } from '../../services/meeting-question.service';
-import { AsyncPipe, NgIf } from '@angular/common';
+import {AsyncPipe} from '@angular/common';
 
 @Component({
   selector: 'app-meeting',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    NgIf
-  ],
   templateUrl: './meeting.component.html',
+  imports: [
+    AsyncPipe
+  ],
   styleUrl: './meeting.component.scss'
 })
-export class MeetingComponent {
-  transcript$: Observable<string>;
-  error$: Observable<string | null>;
+export class MeetingComponent implements OnInit {
+  transcript$!: Observable<string>;
+  status$!: Observable<string>;
 
-  constructor(private svc: MeetingQuestionService) {
-    this.transcript$ = this.svc.transcript;
-    this.error$ = this.svc.error;
+  constructor(private ocrSniffer: OcrSnifferService) {}
+
+  ngOnInit() {
+    this.transcript$ = this.ocrSniffer.transcript;
+    this.status$ = this.ocrSniffer.status;
   }
 
   start() {
-    this.svc.startCapture();
+    this.ocrSniffer.setCaptureArea({ x: 100, y: 700, width: 800, height: 100 });
+    this.ocrSniffer.startOcr(1500);
   }
 
   stop() {
-    this.svc.stopCapture();
-  }
-
-  clearError() {
-    this.svc.clearError();
+    this.ocrSniffer.stopOcr();
   }
 }
